@@ -1,0 +1,18 @@
+# GraphQL
+
+## Overview
+
+This project is an alternative format for the Intra profile page, showcasing essential user information and statistics in a visually appealing manner. 
+The projects shows the information about the profile, xp amount and audit made and Received.
+The user can choise from the modules finsihed by them. to switch the view.
+
+## How to Run and Use
+
+    - The project is hosted online at
+
+    - To run the project locally use "Live Server" extension in VSCode.
+
+
+
+## Created by
+Safe_time

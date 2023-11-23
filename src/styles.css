@@ -1,0 +1,131 @@
+
+html {
+    height: 100%;
+}
+
+/* Apply basic styling to the body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the form vertically and horizontally */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* Style the form container */
+form {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style form labels and input fields */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the feedback message */
+#feedback {
+    margin-top: 15px;
+    color: #007bff;
+    text-align: center;
+}
+
+#main {
+    width: 100%;
+    position:relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+}
+
+#graphs {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#graph1, #graph2 {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    height: 300px;
+}
+
+#personal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#general-info, #XP-total, #Audit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#data-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    max-width: 400px;
+    width: 30%;
+
+}
+#logout {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#modules {
+    display: flex;
+    justify-content: center;
+}
