@@ -496,7 +496,7 @@ function updateGraphs(module) {
             title: "Total XP per month and cumulative sum of it",
             data: graphData,
             type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
-            height: 300,
+            height: 250,
             colors: ['#7cd6fd', '#743ee2']
         })
         const chart2 = new frappe.Chart("#graph2", {  // or a DOM element,
@@ -504,7 +504,7 @@ function updateGraphs(module) {
         title: "Number of tasks done each month",
         data: graphData2,
         type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
-        height: 300,
+        height: 250,
         colors: ['#7cd6fd', '#743ee2']
         })
 
