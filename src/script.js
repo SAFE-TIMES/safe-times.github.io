@@ -418,6 +418,7 @@ function updateGraphs(module) {
                     minDate.setMonth(month+1);
                 }
               }
+            console.log(init);
             //
             timeDataCleaned = timeData.reduce((result, item) => {
                 const year = item.createdAt.getFullYear();
@@ -446,6 +447,7 @@ function updateGraphs(module) {
                 init[key] = { sum: 0, count: 0, cumSum: 0, names: [], lable: `${day} ${minDate.toLocaleString('default', { month: 'short' })}`};
                 minDate.setDate(day+1)
               }
+            console.log(init);
             timeDataCleaned = timeData.reduce((result, item) => {
                 const year = item.createdAt.getFullYear();
                 const month = item.createdAt.getMonth();
@@ -462,6 +464,7 @@ function updateGraphs(module) {
                 return result;
             }, init);
         }
+        console.log(timeDataCleaned)
         dataCleanedMap = Object.values(timeDataCleaned); 
         for (i = 1; i<dataCleanedMap.length; i++) {
             if(dataCleanedMap[i].cumSum == 0 ) {
@@ -493,7 +496,7 @@ function updateGraphs(module) {
         
         const chart = new frappe.Chart("#graph1", {  // or a DOM element,
                                                     // new Chart() in case of ES6 module with above usage
-            title: "Total XP per month and cumulative sum of it",
+            title: "Total XP per period and cumulative sum of it",
             data: graphData,
             type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
             height: 250,
@@ -501,7 +504,7 @@ function updateGraphs(module) {
         })
         const chart2 = new frappe.Chart("#graph2", {  // or a DOM element,
             // new Chart() in case of ES6 module with above usage
-        title: "Number of tasks done each month",
+        title: "Number of tasks done each period",
         data: graphData2,
         type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
         height: 250,
