@@ -396,8 +396,6 @@ function updateGraphs(module) {
     .then(data => {
     // Handle the GraphQL response data here
         let timeData = data.data.transaction;
-        console.log(timeData[0]);
-        console.log(timeData[timeData.length-1])
         timeData.forEach(item => {
             item.createdAt = new Date(item.createdAt);
           });
@@ -420,7 +418,6 @@ function updateGraphs(module) {
                     minDate.setMonth(month+1);
                 }
               }
-            console.log(init);
             //
             timeDataCleaned = timeData.reduce((result, item) => {
                 const year = item.createdAt.getFullYear();
@@ -449,7 +446,6 @@ function updateGraphs(module) {
                 init[key] = { sum: 0, count: 0, cumSum: 0, names: [], lable: `${day} ${minDate.toLocaleString('default', { month: 'short' })}`};
                 minDate.setDate(day+1)
               }
-            console.log(init);
             timeDataCleaned = timeData.reduce((result, item) => {
                 const year = item.createdAt.getFullYear();
                 const month = item.createdAt.getMonth();
@@ -466,10 +462,9 @@ function updateGraphs(module) {
                 return result;
             }, init);
         }
-        console.log(timeDataCleaned)
         dataCleanedMap = Object.values(timeDataCleaned); 
         for (i = 1; i<dataCleanedMap.length; i++) {
-            if(dataCleanedMap[i].cumSum == 0 ) {
+            if( dataCleanedMap[i-1].cumSum > dataCleanedMap[i].cumSum ) {
                 dataCleanedMap[i].cumSum = dataCleanedMap[i-1].cumSum; 
             }
         }
