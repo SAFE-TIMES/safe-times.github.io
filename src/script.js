@@ -396,6 +396,8 @@ function updateGraphs(module) {
     .then(data => {
     // Handle the GraphQL response data here
         let timeData = data.data.transaction;
+        console.log(timeData[0]);
+        console.log(timeData[timeData.length-1])
         timeData.forEach(item => {
             item.createdAt = new Date(item.createdAt);
           });
