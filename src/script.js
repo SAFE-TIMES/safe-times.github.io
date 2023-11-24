@@ -343,7 +343,7 @@ function updateAudit(module) {
         let intro = document.createElement("p");
         intro.innerText = "Audit done in: " + module;
         let number = document.createElement("h3");
-        number.textContent = data.data.transaction_aggregate.aggregate.sum.amount/1000 + "MB";
+        number.textContent = data.data.transaction_aggregate.aggregate.sum.amount/1000 + "KB";
         element.appendChild(intro);
         element.appendChild(number);
     })
@@ -364,7 +364,7 @@ function updateAudit(module) {
         let intro = document.createElement("p");
         intro.innerText = "Audit received in: " + module;
         let number = document.createElement("h3");
-        number.textContent = data.data.transaction_aggregate.aggregate.sum.amount/1000 + "MB";
+        number.textContent = data.data.transaction_aggregate.aggregate.sum.amount/1000 + "KB";
         element.appendChild(intro);
         element.appendChild(number);
     })
